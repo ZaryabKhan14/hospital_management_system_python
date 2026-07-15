@@ -370,7 +370,7 @@ This project demonstrates:
 Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ZaryabKhan14/hospital_management_system_python.git
 ```
 
 Go into the project directory
