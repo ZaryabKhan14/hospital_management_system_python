@@ -10,6 +10,7 @@ from admin_panel.update_patient import update_patient_information
 from admin_panel.delete_patient import delete_patient
 from admin_panel.view_doctors import view_all_doctors
 from admin_panel.add_doctor_details import add_doctor_details
+from admin_panel.update_doctor_details import update_doctor_Details
 
 def admin_home(role):
 
@@ -29,15 +30,16 @@ def admin_home(role):
         print("9. Delete Patient")
         print("10. Add Doctors Details")
         print("11. View All Doctors")
-        print("12. Assign Doctor to Patient")
-        print("13. View All Appointments")
-        print("14. Cancel Appointment")
-        print("15. Logout")
+        print("12. Update Doctors Details")
+        print("13. Assign Doctor to Patient")
+        print("14. View All Appointments")
+        print("15. Cancel Appointment")
+        print("16. Logout")
 
 
         choice = helper.get_input_choice(
                     "Enter your choice: ",
-                    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+                    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,16]
                 )
         
         match choice:
@@ -88,18 +90,22 @@ def admin_home(role):
                 view_all_doctors()
 
             case 12:
+                print("_____ Update Doctors Details _____")
+                update_doctor_Details()
+
+            case 13:
                 print("_____ Assign Doctor to Patient _____")
                 # assign_doctor_to_patient()
 
-            case 13:
+            case 14:
                 print("_____ View All Appointments _____")
                 # view_all_appointments()
 
-            case 14:
+            case 15:
                 print("_____ Cancel Appointment _____")
                 # cancel_appointment()
 
-            case 15:
+            case 16:
                 print("Logging out...")
                 break
 

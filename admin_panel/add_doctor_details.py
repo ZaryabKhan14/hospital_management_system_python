@@ -1,6 +1,7 @@
 import helper
 import csv
 import os
+from admin_panel.status_input import status_input
 
 def add_doctor_details():
 
@@ -18,7 +19,7 @@ def add_doctor_details():
 
     doctor_id = 1
                     
-    header = ["doctor_id","user_id","doctor_name","doctor_specilization","doctor_phone_number","doctor_email","doctor__qualification","doctor_experiance"]
+    header = ["doctor_id","user_id","doctor_name","doctor_specilization","doctor_phone_number","doctor_email","doctor_qualification","doctor_experiance","consultation_fee","availability","duty_timing","status"]
 
     found = False
 
@@ -43,8 +44,12 @@ def add_doctor_details():
                     doctor_specilization = helper.get_input_string("Enter Doctor Specilization : ")
                     doctor_phone_number = helper.get_input_string("Enter Doctor Phone Number : ")
                     doctor_email = helper.get_input_string("Enter Doctor Email : ")
-                    doctor__qualification = helper.get_input_string("Enter Doctor Qualification : ")
+                    doctor_qualification = helper.get_input_string("Enter Doctor Qualification : ")
                     doctor_experiance = helper.get_input_string("Enter Doctor Experiance : ")
+                    consultation_fee = helper.get_input_string("Enter Doctor Consultation Fee : ")
+                    availability = helper.get_input_string("Enter Doctor Availability : ")
+                    duty_timing = helper.get_input_string("Enter Doctor Duty Timing : ")
+                    status = status_input()
 
                     break
             
@@ -72,10 +77,10 @@ def add_doctor_details():
 
     print(f"Doctor ID: {doctor_id}")
 
-    add_doctor_data = [doctor_id,user_id,doctor_name,doctor_specilization,doctor_phone_number,doctor_email,doctor__qualification,doctor_experiance]
+    add_doctor_data = [doctor_id,user_id,doctor_name,doctor_specilization,doctor_phone_number,doctor_email,doctor_qualification,doctor_experiance,consultation_fee,availability,duty_timing,status]
 
 
-    with open("data/doctors_details.csv", mode="a" , newline="") as csv_file:
+    with open(file_name2, mode="a" , newline="") as csv_file:
 
         writer = csv.writer(csv_file)
 

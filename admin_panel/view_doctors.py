@@ -33,8 +33,12 @@ def view_all_doctors():
             print(f"Doctor Specilization : {row['doctor_specilization']}")
             print(f"Doctor Phone Number : {row['doctor_phone_number']}")
             print(f"Doctor Email : {row['doctor_email']}")
-            print(f"Doctor Qualification : {row['doctor__qualification']}")
+            print(f"Doctor Qualification : {row['doctor_qualification']}")
             print(f"Doctor Experiance : {row['doctor_experiance']}")
+            print(f"Doctor Consultation Fee : {row['consultation_fee']}")
+            print(f"Doctor Availability : {row['availability']}")
+            print(f"Doctor Duty Timing : {row['duty_timing']}")
+            print(f"Doctor Status : {row['status']}")
             print("-" * 30)
 
         if not found:
