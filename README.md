@@ -21,6 +21,7 @@ The project follows a **modular functional programming approach**, where each mo
 - Delete Patient
 - Add Doctor Details
 - View All Doctors
+- Update Doctors Details
 - Assign Doctor to Patient
 - View All Appointments
 - Cancel Appointment
