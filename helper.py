@@ -1,3 +1,33 @@
+from datetime import datetime
+
+def get_input_date(message):
+
+    while True:
+
+        date = input(message).strip()
+
+        try:
+            datetime.strptime(date, "%Y-%m-%d")
+            return date
+
+        except ValueError:
+            print("Invalid date. Please use YYYY-MM-DD.")
+
+def get_input_time(message):
+
+    while True:
+
+        time = input(message).strip()
+
+        try:
+            datetime.strptime(time, "%H:%M")
+            return time
+
+        except ValueError:
+            print("Invalid time. Please use HH:MM (24-hour format).")
+
+            
+
 def get_input_integer(message):
     while True:
         try:

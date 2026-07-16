@@ -4,6 +4,8 @@ from receptionist_panel.view_all_patient import view_all_patient
 from receptionist_panel.search_patient import search_patient
 from receptionist_panel.update_patient_information import update_patient_information
 
+from receptionist_panel.book_appointment import book_appointment
+
 def receptionist_menu(role):
 
     while True:
@@ -16,10 +18,9 @@ def receptionist_menu(role):
         print("5. Book Appointment")
         print("6. View Appointments")
         print("7. Cancel Appointment")
-        print("8. Assign Doctor")
-        print("9. Admit Patient")
-        print("10. Discharge Patient")
-        print("11. Logout")
+        print("8. Reschedule Appointment")
+        print("9. Search Appointment")
+        print("10. Logout")
 
         option = helper.get_input_choice(
             "Enter your choice: ",
@@ -44,6 +45,8 @@ def receptionist_menu(role):
             case 5:
                 print("_____ Book Appointment _____")
 
+                book_appointment()
+
             case 6:
                 print("_____ View Appointments _____")
 
@@ -51,14 +54,12 @@ def receptionist_menu(role):
                 print("_____ Cancel Appointment _____")
 
             case 8:
-                print("_____ Assign Doctor _____")
+                print("_____ Reschedule Appointment _____")
+
 
             case 9:
-                print("_____ Admit Patient _____")
+                print("_____ Search Appointment _____")
 
             case 10:
-                print("_____ Discharge Patient _____")
-
-            case 11:
                 print("Logging out...")
                 break

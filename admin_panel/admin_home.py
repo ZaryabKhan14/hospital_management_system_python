@@ -11,6 +11,8 @@ from admin_panel.delete_patient import delete_patient
 from admin_panel.view_doctors import view_all_doctors
 from admin_panel.add_doctor_details import add_doctor_details
 from admin_panel.update_doctor_details import update_doctor_Details
+from admin_panel.search_doctors_details import search_doctors_details
+from admin_panel.delete_doctor_details import delete_doctor_details
 
 def admin_home(role):
 
@@ -31,15 +33,17 @@ def admin_home(role):
         print("10. Add Doctors Details")
         print("11. View All Doctors")
         print("12. Update Doctors Details")
-        print("13. Assign Doctor to Patient")
-        print("14. View All Appointments")
-        print("15. Cancel Appointment")
-        print("16. Logout")
+        print("13. Search Doctors Details")
+        print("14. Delete Doctors Details")
+        print("14. Assign Doctor to Patient")
+        print("15. View All Appointments")
+        print("16. Cancel Appointment")
+        print("17. Logout")
 
 
         choice = helper.get_input_choice(
                     "Enter your choice: ",
-                    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,16]
+                    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,16, 17, 18]
                 )
         
         match choice:
@@ -94,18 +98,26 @@ def admin_home(role):
                 update_doctor_Details()
 
             case 13:
+                print("_____ Search Doctors Details _____")
+                search_doctors_details()
+
+            case 14:
+                print("_____ Delete Doctors Details _____")
+                delete_doctor_details()
+
+            case 15:
                 print("_____ Assign Doctor to Patient _____")
                 # assign_doctor_to_patient()
 
-            case 14:
+            case 16:
                 print("_____ View All Appointments _____")
                 # view_all_appointments()
 
-            case 15:
+            case 17:
                 print("_____ Cancel Appointment _____")
                 # cancel_appointment()
 
-            case 16:
+            case 18:
                 print("Logging out...")
                 break
 
