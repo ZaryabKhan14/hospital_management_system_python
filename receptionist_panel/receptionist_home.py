@@ -5,6 +5,9 @@ from receptionist_panel.search_patient import search_patient
 from receptionist_panel.update_patient_information import update_patient_information
 
 from receptionist_panel.book_appointment import book_appointment
+from receptionist_panel.view_appointment import view_all_appointments
+from receptionist_panel.cancel_appointment import cancel_appointment
+from receptionist_panel.reschedule_appointment import reschedule_appointment
 
 def receptionist_menu(role):
 
@@ -50,12 +53,17 @@ def receptionist_menu(role):
             case 6:
                 print("_____ View Appointments _____")
 
+                view_all_appointments()
+
             case 7:
                 print("_____ Cancel Appointment _____")
+
+                cancel_appointment()
 
             case 8:
                 print("_____ Reschedule Appointment _____")
 
+                reschedule_appointment()
 
             case 9:
                 print("_____ Search Appointment _____")
